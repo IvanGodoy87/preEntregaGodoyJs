@@ -71,9 +71,9 @@ let productosDisponibles = {
       alert("Producto no encontrado.");
     }
     
-    let respuesta = prompt("¿Desea agregar otro producto al carrito? (SI/NO)");
+    let respuesta = prompt("¿Desea agregar otro producto al carrito? (S/N)");
     
-    if (respuesta.toUpperCase() === "SI ") {
+    if (respuesta.toUpperCase() === "S") {
       agregarProductoAlCarrito();
     } else {
       mostrarCarrito();
@@ -90,7 +90,7 @@ let productosDisponibles = {
       total += carrito[producto].precio * carrito[producto].cantidad;
     }
     
-    lista += `\nTotal: $${total}`;
+    lista += `\nTotal: $${total.toFixed(2)}`;
     
     alert(lista);
   }
